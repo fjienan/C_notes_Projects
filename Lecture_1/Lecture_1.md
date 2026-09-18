@@ -1,4 +1,4 @@
-#  :one: Lecture Introduction
+#  :one: Lecture >>Introduction
 ## 分数组成
 Final Exam :**50%**
 

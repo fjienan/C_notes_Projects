@@ -1,17 +1,16 @@
 #include<stdio.h>
-void swap(int *var1, int *var2);
+#include<stdlib.h>
 
 int main(){
-    int a = 1, b = 5;
-    printf("%d and %d\n",a, b);
-    swap(&a, &b);
-    printf("%d and %d\n",a, b);
+    float a = 1.0, b = 5.0;
+    float *ptr = NULL;
+    ptr = (float*)calloc(2,sizeof(float));
+    *ptr = a;
+    *(ptr+1) = b;
+    printf("%f and %f\n",ptr[0], ptr[1]);
+    free(ptr);
+    if (ptr == NULL){
+        printf("ptr is NULL\n");
+    }
     return 0;
-}
-
-void swap(int *var1, int *var2){
-    int temp;
-    temp = *var1;
-    *var1 = *var2;
-    *var2 = temp;
 }
